@@ -1,0 +1,589 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+body>img:nth-child(1){
+    width: 100%;
+    filter: blur(8px);
+    position: absolute;
+    top: 0px;
+}
+body>img:nth-child(2){
+    width: 100%;
+    filter: blur(8px);
+    position: absolute;
+    top: 1075px;
+}
+body>img:nth-child(3){
+    width: 100%;
+    filter: blur(8px);
+    position: absolute;
+    top: 1850px;
+}
+body>img:nth-child(4){
+    width: 100%;
+    filter: blur(8px);
+    position: absolute;
+    top: 2640px;
+}
+body>img:nth-child(5){
+    width: 100%;
+    filter: blur(8px);
+    position: absolute;
+    top: 3420px;
+}
+body>img:nth-child(6){
+    width: 100%;
+    filter: blur(5px);
+    position: absolute;
+    top: 4206px;
+}
+/* 第一屏翻页的书 */
+.book{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: 100px;
+    left: 900px;
+    transform: rotateX(30deg);
+}
+.book img{
+    width: 400px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+ .book-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+}
+.book-page-box {
+    transform-origin: 0 50%;
+    transform: rotateY(0deg);
+}
+
+/*书的封面*/
+.flip-animation-1 {
+    animation: flipBook1 8s 5s 2 alternate;
+}
+@keyframes flipBook1
+{
+0%   {
+        transform: rotateY(0deg);}
+100% {
+        transform: rotateY(-170deg);
+        opacity: 0.2;
+    }
+}
+
+/*书的第二页*/
+.flip-animation-2 {
+    animation: flipBook2 6s 7s 2 alternate;
+}
+@keyframes flipBook2
+{
+0%   {
+        transform: rotateY(0deg);}
+100% {
+        transform: rotateY(-160deg);
+        opacity: 0.4;
+    }
+}
+
+/*书的第三页*/
+.flip-animation-3 {
+    animation: flipBook3 5s 8s 2 alternate;
+}
+@keyframes flipBook3
+{
+0%   {
+        transform: rotateY(0deg);}
+100% {
+        transform: rotateY(-150deg);
+        opacity: 0.6;
+    }
+}
+
+/*书的第四页*/
+.flip-animation-4 {
+    animation: flipBook4 4s 9s 2 alternate;
+}
+@keyframes flipBook4
+{
+0%   {
+        transform: rotateY(0deg);}
+100% {
+        transform: rotateY(-140deg);
+        opacity: 0.7;
+    }
+}
+/*书的第五页*/
+.flip-animation-5 {
+    animation: flipBook5 3s 10s 2 alternate;
+}
+@keyframes flipBook5
+{
+0%   {
+        transform: rotateY(0deg);}
+100% {
+        transform: rotateY(-130deg);
+        opacity: 0.8;
+    }
+}
+
+
+/* 第二屏 站着的谢安然 */
+.second{
+    width: 250px;
+    margin: 100px auto;
+    position: relative;
+    top: 600px;
+    left: 170px;
+}
+.second img{
+    width: 250px;
+    margin: 100px auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+}
+.second img:nth-child(1){
+    width: 400px;
+    top: -200px;
+    left: -125px;
+    filter: blur(10px);
+    border: 1px solid rgb(185, 173, 173);
+    border-radius: 40px;
+    transform: skew(10deg,0deg);
+    animation: gre 2s cubic-bezier(0.13, 1.13, 0.58, 1) infinite alternate forwards;
+}
+.second img:nth-child(2){
+    width: 350px;
+    display: block;
+    left: -40px;
+    top: -151px;
+    animation: gre1 2s cubic-bezier(0.13, 1.13, 0.58, 1) infinite alternate forwards;
+    border: 1px solid rgb(185, 173, 173);
+    border-radius: 30px;
+    box-shadow: -18px -2px 30px rgb(133, 129, 129) ;
+}
+.second img:nth-child(3){
+    width: 290px;
+    top: -61px;
+    left: -42px;
+    animation: gre2 2s cubic-bezier(0.13, 1.13, 0.58, 1) infinite alternate forwards;
+    opacity: 0;
+}
+@keyframes gre{
+    0%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0.1;
+    }
+}
+
+@keyframes gre1{
+    0%{
+        transform: skew(0deg,0deg) rotateX(0deg);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: skew(37deg,0deg) rotateX(60deg);
+        transform-origin: bottom;
+        opacity: 0.6;
+    }
+}
+@keyframes gre2{
+    0%{
+        transform: skew(37deg,0deg) rotateX(60deg);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: skew(0deg,0deg) rotateX(0deg);
+        transform-origin: bottom;
+        opacity: 1;
+    }
+}
+
+
+/* 第三屏 跳动的谢安然 */
+.jump{
+    width: 150px;
+    margin: 100px auto;
+    position: relative;
+    top: 1250px;
+    left: 600px;
+    transform-style: preserve-3d;
+}
+.jump img{
+    width: 150px;
+    margin: 100px auto;
+    position: absolute;
+    top: 0px;
+    left: -350px;
+    border: 1px solid rgb(85, 78, 78);
+    border-radius: 20px;
+}
+.jump .jump1{
+    animation: jump1 2.7s 2s infinite alternate;
+}
+.jump .jump2{
+    animation: jump1 2.7s 2.1s infinite alternate;
+}
+.jump .jump3{
+    animation: jump1 2.7s 2.2s  infinite alternate;
+}
+.jump .jump4{
+    animation: jump1 2.7s 2.35s  infinite alternate;
+}
+.jump .jump5{
+    animation: jump1 2.7s 2.55s  infinite alternate;
+}
+.jump .jump6{
+    animation: jump1 2.7s 2.75s  infinite alternate;
+}
+@keyframes jump1{
+    0%{}
+    25%{
+        top: 200px;
+        left: 0px;
+        transform: scale(1.1) rotateZ(-20deg);
+        opacity: 0.7;
+    }
+    50%{
+        top: 400px;
+        left: -360px;
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    75%{
+        top: 80px;
+        left: -600px;
+        transform: scale(0.8) rotateZ(-20deg);
+        opacity: 0.6;
+    }
+    100%{
+        top: 450px;
+        left: -900px;
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+/* 第四屏 翻转的谢安然 */
+.rolling-over{
+    width: 300px;
+    height: 500px;
+    /* margin: 70px auto; */
+    position: relative;
+    top: 2200px;
+    left: 700px;
+    transform-style: preserve-3d;
+}
+.roll{
+    width: 300px;
+    height: 500px;
+    border-radius: 40px;
+    box-shadow: -40px -15px 100px rgba(192,182,217,0.7);
+    animation: roll 3s infinite;
+}
+@keyframes roll{
+    0%{
+        
+    }
+    50%{
+        transform: rotateY(360deg);
+        
+    }
+    100%{
+        transform: rotateY(90deg);
+        /* opacity: 0; */
+    }
+}
+.a,.b{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40px;
+   
+}
+.b{
+    transform: rotateY(180deg);
+    animation: bg 3s infinite;
+}
+@keyframes bg{
+    0%{
+        
+    }
+    50%{
+        transform: rotateY(90deg);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: rotateY(180deg);
+        
+    }
+}
+.flower{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.flower-1{
+    top: 100px;
+    left: -150px;
+    animation: flower 4s 1s infinite alternate;
+}
+.flower-2{
+    top: 300px;
+    left: 400px;
+    animation: flower 4s  infinite alternate;
+}
+.flower-3{
+    top: 300px;
+    left: -250px;
+    animation: flower 4s  infinite alternate;
+}
+.flower-4{
+    top: 219px;
+    left: -80px;
+    animation: flower 4s  infinite alternate;
+}
+.flower-5{
+    top: 185px;
+    left: 500px;
+    animation: flower 4s 1s infinite alternate;
+}
+.flower-6{
+    top: 438px;
+    left: -162px;
+    animation: flower 4s 1s infinite alternate;
+}
+.flower-7{
+    top: 52px;
+    left: 350px;
+    animation: flower 4s  infinite alternate;
+}
+.flower-8{
+    top: 460px;
+    left: 330px;
+    animation: flower 4s 1s infinite alternate;
+}
+.flower-9{
+    top: 43px;
+    left: -262px;
+    animation: flower 4s  infinite alternate;
+}
+.flower-10{
+    top: -8px;
+    left: 517px;
+    animation: flower 3s infinite alternate;
+}
+.flower-11{
+    top: 395px;
+    left: 490px;
+    animation: flower 3s infinite alternate;
+}
+.flower-12{
+    top: 235px;
+    left: 613px;
+    animation: flower 3s 1s infinite alternate;
+}
+@keyframes flower{
+    0%{
+        transform: scale(0) translate(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translate(-100px) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+/* 倒影 */
+.inverted{
+    width: 300px;
+    height: 500px;
+    /* margin: 70px auto; */
+    position: relative;
+    top: 2550px;
+    left: 700px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: roa 15s linear infinite;
+}
+.inverted:hover{
+    animation-play-state: paused;
+    /* 鼠标悬浮时动画暂停 */
+}
+
+.inverted div{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-reflect: below -640px linear-gradient(transparent, rgb(214, 210, 210)); 
+}
+.inverted div img{
+    width: 300px;
+    border-radius: 10px;
+}
+.inverted div:nth-child(6){
+    transform: rotateY(0deg) translateZ(300px);
+}
+.inverted div:nth-child(1){
+    transform: rotateY(60deg) translateZ(300px);
+}
+.inverted div:nth-child(2){
+    transform: rotateY(120deg) translateZ(300px);
+}
+.inverted div:nth-child(3){
+    transform: rotateY(180deg) translateZ(300px);
+}
+.inverted div:nth-child(4){
+    transform: rotateY(240deg) translateZ(300px);
+}
+.inverted div:nth-child(5){
+    transform: rotateY(300deg) translateZ(300px);
+}
+/* 旋转动画 */
+@keyframes roa {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+/* 最后一屏 玩跷跷板 */
+.play{
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top: 2850px;
+    left: 700px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.play img{
+    position: absolute;
+}
+.play img:nth-child(1){
+    top: 353px;
+    left: 50px;
+    width: 100px;
+}
+.play img:nth-child(2){
+    top: 306px;
+    left: -200px;
+    width: 600px;
+    transform: rotate3d(0,1,1,22deg);  
+    animation: gan 2s ease infinite alternate;
+}
+@keyframes gan{
+    0%{}
+    100%{
+        transform: rotate3d(0,1,1,-22deg);
+    }
+}
+.play img:nth-child(3){
+    top: -15px;
+    left: -225px;
+    width: 100px;
+    animation: left 2s ease infinite alternate;
+}
+@keyframes left{
+    0%{}
+    100%{
+        top: 200px;
+        left: -140px;
+        transform: scale(1.5);
+    }
+}
+.play img:nth-child(4){
+    top: 113px;
+    left: 213px;
+    width: 200px;
+    animation: right 2s ease infinite alternate;
+}
+@keyframes right{
+    0%{}
+    100%{
+        top: -50px;
+        left: 300px;
+        transform: scale(0.5);
+    }
+}
+
+/* 我的歌单固定部分 */
+.fix{
+    width: 400px;
+    height: 700px;
+    position: fixed;
+    top: 100px;
+    left: 0px;
+}
+.fix ul{
+    margin-left: 50px;
+    list-style: none;
+}
+.fix li{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 0;
+}
+
+.fix li a{
+    color: rgb(245,245,245);
+    font-size: 16px;
+    position: absolute;
+    left: -34px;
+    transition: all 1s;
+}
+.fix li a:hover{
+    color: rgb(247, 234, 52);
+    left: 0px;
+    transform: scale(1.2);
+}
+
+.fix li:nth-child(1){
+    text-indent: 22px;
+    color: rgb(245,245,245);
+    font-size: 14px;
+    cursor: pointer;
+}
+.fix li:nth-child(1) img{
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+}
+.fix p{
+    color: rgb(245,245,245);
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: -2px -3px 4px rgb(215, 236, 143);
+    margin:0 0 -12px 50px;
+}
